@@ -1,0 +1,294 @@
+/* Swan Dawn Theme CSS */
+
+:root {
+  --snow-white: #ffffff;
+  --dawn-cream: #fef9f3;
+  --soft-blue: #e8f4f8;
+  --sky-blue: #b8dae8;
+  --warm-gray: #8b9196;
+  --charcoal: #2c3e50;
+  --gentle-blue: #5a7a8a;
+  --warm-beige: #f5f2eb;
+  --light-silver: #e8e8e8;
+  --cozy-brown: #6d5a47;
+  --dawn-pink: #ff8a9b; /* Added: Soft pink for button gradient */
+  --dawn-coral: #ff6f61; /* Added: Vibrant coral for button gradient */
+  --dawn-peach: #ffccbc;}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+  background: linear-gradient(180deg, 
+    var(--snow-white) 0%, 
+    var(--dawn-cream) 20%, 
+    var(--soft-blue) 50%, 
+    var(--sky-blue) 80%, 
+    var(--gentle-blue) 100%);
+  min-height: 100vh;
+  color: var(--charcoal);
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    radial-gradient(ellipse at 30% 20%, rgba(255, 255, 255, 0.8) 10%, transparent 40%),
+    radial-gradient(ellipse at 70% 15%, rgba(255, 255, 255, 0.6) 8%, transparent 35%),
+    radial-gradient(ellipse at 50% 80%, rgba(135, 206, 235, 0.3) 20%, transparent 60%);
+  animation: dawnReflection 20s ease-in-out infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: 
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(135, 206, 235, 0.1) 3px,
+      rgba(135, 206, 235, 0.1) 6px
+    );
+  animation: waterRipples 8s linear infinite;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.navbar {
+  background: rgba(254, 254, 254, 0.9) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(192, 192, 192, 0.3);
+  box-shadow: 0 4px 20px rgba(255, 179, 186, 0.2);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  text-shadow: 0 2px 4px rgba(255, 179, 186, 0.3);
+  transition: all 0.3s ease;
+}
+
+.navbar-brand:hover {
+  color: var(--dawn-coral) !important;
+  transform: translateY(-2px);
+}
+
+.nav-link {
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--dawn-rose), var(--dawn-coral));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.nav-link:hover {
+  color: var(--dawn-coral) !important;
+  transform: translateY(-2px);
+}
+
+header {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(5px);
+  margin: 2rem 0 0.5rem 0; /* Reduced bottom margin to 0.5rem */
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive; /* Decorative font */
+  font-size: 3rem;
+  background: linear-gradient(45deg, var(--dawn-rose), var(--dawn-coral), var(--dawn-peach));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 2px 2px 10px rgba(255, 179, 186, 0.3);
+  animation: titleGlow 4s ease-in-out infinite;
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+main div {
+  background: rgba(254, 254, 254, 0.8);
+  backdrop-filter: blur(10px);
+  margin: 2rem 0;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(255, 179, 186, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+main div:first-child {
+  margin-top: 0.5rem; /* Reduced top margin for first div */
+}
+
+main div:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(255, 179, 186, 0.3);
+}
+
+h1 {
+  color: var(--water-deep);
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  text-shadow: 1px 1px 3px rgba(135, 206, 235, 0.2);
+}
+
+p {
+  line-height: 1.6;
+  color: var(--shadow-gray);
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background: linear-gradient(45deg, var(--dawn-blue), var(--dawn-blue)) !important;
+  border: none !important;
+  padding: 12px 30px !important;
+  border-radius: 25px !important;
+  font-weight: bold !important;
+  text-transform: uppercase !important;
+  letter-spacing: 1px !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 15px rgb(187, 179, 255) !important;
+}
+
+.btn:hover {
+  transform: translateY(-3px) !important;
+  box-shadow: 0 8px 25px rgba(187, 179, 255, 0.6) !important;
+  background: linear-gradient(45deg, var(--dawn-coral), var(--dawn-peach)) !important;
+}
+
+dl {
+  margin: 1.5rem 0;
+}
+
+dt {
+  font-weight: bold;
+  color: var(--water-deep);
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+dd {
+  margin-left: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--shadow-gray);
+}
+
+.slide-container {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(135, 206, 235, 0.3);
+}
+
+.slide-container div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+  padding: 0;
+  border-radius: 0;
+  backdrop-filter: none;
+  background: none;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(70, 130, 180, 0.1);
+  backdrop-filter: blur(10px);
+  margin-top: 3rem;
+}
+
+@keyframes dawnReflection {
+  0%, 100% {
+    opacity: 0.8;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes waterRipples {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(6px);
+  }
+}
+
+@keyframes titleGlow {
+  0%, 100% {
+    text-shadow: 2px 2px 10px rgba(255, 179, 186, 0.3);
+  }
+  50% {
+    text-shadow: 2px 2px 20px rgba(255, 179, 186, 0.6);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  main div {
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+
+  main div:first-child {
+    margin-top: 0.5rem; /* Consistent reduced margin for responsive */
+  }
+  
+  
+  .slide-container div {
+    font-size: 1.2rem;
+    min-width: 100vw;
+  }
+}

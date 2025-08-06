@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Photo - Pictoon AI Avatar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../static/css/upload-styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+ <div class="container">
+ <h1>
+ <a class="navbar-brand" href="#" style="font-size: 2rem; color: black;">Pictoon</a>
+ </h1>
+ 
+ <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navmenu" aria-controls="navmenu" aria-expanded="false" aria-label="Toggle navigation">
+ <span class="navbar-toggler-icon"></span>
+ </button>
+
+
+ <div class="collapse navbar-collapse" id="navmenu">
+ <ul class="navbar-nav ms-auto">
+ <li class="nav-item">
+ <a class="nav-link active" aria-current="page" href="#" style="color: black;">Sign Up</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link active" aria-current="page" href="#" style="color: black;">Features</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" href="#" style="color: black;">AI Editor</a>
+ </li>
+ <li class="nav-item">
+ <a class="nav-link" href="#" style="color: black;">AI Generator</a>
+ </li>
+ </ul>
+ </div>
+ </div>
+ </nav>
+
+                    </button>
+                    <div class="profile-icon">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-8 col-lg-6">
+                <div class="upload-content text-center">
+                    <!-- Avatar Preview -->
+                    <div class="avatar-preview mb-4">
+                        <div class="avatar-main">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjE1MCIgdmlld0JveD0iMCAwIDIwMCAxNTAiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMTUwIiBmaWxsPSIjODdDRUVCIi8+CjxjaXJjbGUgY3g9IjEwMCIgY3k9IjQwIiByPSIyMCIgZmlsbD0iI0Y0QTI2MSIvPgo8cmVjdCB4PSI4MCIgeT0iNjAiIHdpZHRoPSI0MCIgaGVpZ2h0PSI2MCIgZmlsbD0iI0Y0QTI2MSIvPgo8cmVjdCB4PSI2MCIgeT0iODAiIHdpZHRoPSI4MCIgaGVpZ2h0PSI0MCIgZmlsbD0iI0VDNDg5OSIgcng9IjIwIi8+CjxyZWN0IHg9IjcwIiB5PSI2MCIgd2lkdGg9IjEwIiBoZWlnaHQ9IjMwIiBmaWxsPSIjRjRBMjYxIi8+CjxyZWN0IHg9IjEyMCIgeT0iNjAiIHdpZHRoPSIxMCIgaGVpZ2h0PSIzMCIgZmlsbD0iI0Y0QTI2MSIvPgo8Y2lyY2xlIGN4PSI5MCIgY3k9IjQ1IiByPSIzIiBmaWxsPSIjMDAwIi8+CjxjaXJjbGUgY3g9IjExMCIgY3k9IjQ1IiByPSIzIiBmaWxsPSIjMDAwIi8+CjxwYXRoIGQ9Ik05NSA1NUMxMDAgNTUgMTA1IDU1IDEwNSA1NSIgc3Ryb2tlPSIjMDAwIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4=" alt="Avatar Preview" class="img-fluid">
+                        </div>
+                        <div class="avatar-small">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMzAiIGZpbGw9IiNGNEEyNjEiLz4KPGNpcmNsZSBjeD0iMzAiIGN5PSIyMCIgcj0iOCIgZmlsbD0iI0Y0QTI2MSIvPgo8Y2lyY2xlIGN4PSIyNSIgY3k9IjE4IiByPSIyIiBmaWxsPSIjMDAwIi8+CjxjaXJjbGUgY3g9IjM1IiBjeT0iMTgiIHI9IjIiIGZpbGw9IiMwMDAiLz4KPHBhdGggZD0iTTI4IDIyQzMwIDIyIDMyIDIyIDMyIDIyIiBzdHJva2U9IiMwMDAiIHN0cm9rZS13aWR0aD0iMSIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIi8+CjxyZWN0IHg9IjIwIiB5PSIzMCIgd2lkdGg9IjIwIiBoZWlnaHQ9IjIwIiBmaWxsPSIjRUM0ODk5IiByeD0iMTAiLz4KPC9zdmc+" alt="Small Avatar" class="img-fluid">
+                        </div>
+                        <div class="transform-arrow">
+                            <i class="fas fa-arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <!-- Title -->
+                    <h1 class="upload-title mb-4">Transform your photo into ai avatar</h1>
+
+                    <!-- Upload Area -->
+                    <div class="upload-zone" id="uploadZone">
+                        <div class="upload-inner">
+                            <!-- Upload Button -->
+                            <button class="btn upload-btn mb-3" id="uploadButton">
+                                <i class="fas fa-upload me-2"></i>
+                                Upload Image
+                            </button>
+
+                            <!-- Upload Text -->
+                            <p class="upload-text mb-3">
+                                Upload or drop your image here, or from 
+                                <a href="#" class="library-link">Your Library</a>
+                            </p>
+
+                            <!-- Supported Formats -->
+                            <div class="supported-formats">
+                                <span class="format-label">Supported formats:</span>
+                                <div class="format-badges mt-2">
+                                    <span class="format-badge">JPG</span>
+                                    <span class="format-badge">JPEG</span>
+                                    <span class="format-badge">PNG</span>
+                                    <span class="format-badge">HEIC/HEIF</span>
+                                    <span class="format-badge">WebP</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Hidden File Input -->
+                        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.heic,.heif,.webp" multiple hidden>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-content">
+            <div class="spinner-border text-primary mb-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+            <p class="loading-text">Processing your image...</p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // File upload functionality
+        const uploadZone = document.getElementById('uploadZone');
+        const fileInput = document.getElementById('fileInput');
+        const uploadButton = document.getElementById('uploadButton');
+        const loadingOverlay = document.getElementById('loadingOverlay');
+
+        // Upload button click
+        uploadButton.addEventListener('click', () => {
+            fileInput.click();
+        });
+
+        // Upload zone click
+        uploadZone.addEventListener('click', (e) => {
+            if (e.target.closest('.upload-btn') || e.target.closest('a')) return;
+            fileInput.click();
+        });
+
+        // File selection
+        fileInput.addEventListener('change', handleFileSelect);
+
+        // Drag and drop functionality
+        uploadZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadZone.classList.add('drag-over');
+        });
+
+        uploadZone.addEventListener('dragleave', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('drag-over');
+        });
+
+        uploadZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadZone.classList.remove('drag-over');
+            
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                fileInput.files = files;
+                handleFileSelect({ target: { files: files } });
+            }
+        });
+
+        // Handle file selection
+        function handleFileSelect(event) {
+            const files = event.target.files;
+            if (files.length === 0) return;
+
+            const file = files[0];
+            
+            // Validate file type
+            const validTypes = ['image/jpeg', 'image/jpg', 'image/png', 'image/webp', 'image/heic', 'image/heif'];
+            if (!validTypes.includes(file.type)) {
+                alert('Please select a valid image file (JPG, JPEG, PNG, HEIC/HEIF, WebP)');
+                return;
+            }
+
+            // Validate file size (max 10MB)
+            if (file.size > 10 * 1024 * 1024) {
+                alert('File size should be less than 10MB');
+                return;
+            }
+
+            // Show loading
+            showLoading();
+
+            // Simulate processing time
+            setTimeout(() => {
+                hideLoading();
+                alert(`File uploaded successfully: ${file.name}`);
+                // Here you would normally send the file to your server
+            }, 2000);
+        }
+
+        // Loading functions
+        function showLoading() {
+            loadingOverlay.style.display = 'flex';
+        }
+
+        function hideLoading() {
+            loadingOverlay.style.display = 'none';
+        }
+
+        // Back button functionality
+        function goBack() {
+            // You can implement navigation logic here
+            window.history.back();
+        }
+
+        // Keyboard accessibility
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                hideLoading();
+            }
+        });
+    </script>
+</body>
+</html>
